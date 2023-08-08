@@ -1,7 +1,8 @@
 import React from "react";
 import Search from "./Search";
+import NewItemForm from "./NewItemForm";
 
-function Header({searchFilter, setSearchFilter}) {
+function Header({setSearchFilter, sort, setSort, newItem, setNewItem, listingsArray, setListingsArray}) {
   return (
     <header>
       <h1>
@@ -11,8 +12,17 @@ function Header({searchFilter, setSearchFilter}) {
         gregslist
       </h1>
       <Search
-      searchFilter={searchFilter}
       setSearchFilter={setSearchFilter}
+      sort={sort}
+      setSort={setSort}
+      newItem={newItem}
+      setNewItem={setNewItem}
+      />
+      <NewItemForm
+      newItem={newItem}
+      setNewItem={setNewItem}
+      listingsArray={listingsArray}
+      setListingsArray={setListingsArray}
       />
     </header>
   );

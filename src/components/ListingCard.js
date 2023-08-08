@@ -5,7 +5,6 @@ function ListingCard({id, description, image, location, listingsArray, setListin
   const [favorite, setFavorite] = useState(false)
 
   function handleDeleteClick() {
-    console.log(id)
     fetch(`http://localhost:6001/listings/${id}`, {
       method: 'DELETE',
     })
